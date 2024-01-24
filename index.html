@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+        <div class="head-container">
+            <h1 class="title">Pig Game</h1>
+            <button id="toggle-rules-btn">Hide Rules</button>
+            <div id="rules">
+                <p>
+                <strong>Rule 1:</strong>
+                <span
+                    >Each turn, a player repeatedly rolls a die until either a 1 is
+                    rolled or the player decides to "hold"</span
+                >
+                </p>
+                <p>
+                <strong>Rule 2:</strong>
+                <span
+                    >If the player rolls a 1, they score nothing in this turn and it becomes the next
+                    player's turn.</span
+                >
+                </p>
+                <p>
+                <strong>Rule 3:</strong>
+                <span
+                    >If the player rolls any other number, it is added to their turn
+                    total and the player's turn continues.</span
+                >
+                </p>
+                <p>
+                <strong>Rule 4:</strong>
+                <span
+                    >If a player chooses to 'hold', their turn total is added to their
+                    score, and it becomes the next player's turn.</span
+                >
+                </p>
+                <p id="win-condition-rule">
+                <strong>Win Condition:</strong>
+                <span id="win-condition-rule"
+                    >The first player to score 100 or more points wins.</span
+                >
+                </p>
+            </div>
+            <button id="new-game-btn">New Game</button>
+        </div>
+        <div class="players-container">
+        <section class="player">
+            <h2 class="player-name">Player 1</h2>
+            <p class="player-score" id="p1-score">43</p>
+            <div class="current-container">
+              <p class="current-score-label">Current</p>
+              <p class="current-score" id="p1-current">0</p>
+            </div>
+            <div id="player-btns">
+                <button id="p1-roll-dice-btn" onclick="rollDice()">Roll Dice</button>
+                <button id="p1-hold-btn" onclick="holdCurrentScore()">Hold</button>
+            </div>
+          </section>
+          <section class="player player2">
+            <h2 class="player-name">Player 2</h2>
+            <p class="player-score" id="p2-score">143</p>
+            <div class="current-container">
+              <p class="current-score-label">Current</p>
+              <p class="current-score" id="p2-current">0</p>
+            </div>
+            <div id="player-btns">
+                <button disabled id="p2-roll-dice-btn" onclick="rollDice()">Roll Dice</button>
+                <button disabled id="p2-hold-btn" onclick="holdCurrentScore()">Hold</button>
+            </div>
+          </section>
+        </div>
+
+        </div>
+        <img src="assets/dice-5.png" alt="Playing dice" class="dice" id="dice" />
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

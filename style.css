@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #fdc830; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f37335,
+    #fdc830
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.head-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.players-container {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  flex: 40%;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+  background-color: #fdc830;
+  margin: 10px 30px 10px 30px;
+}
+
+.player2 {
+  background-color: #30aefd;
+}
+
+#rules {
+  width: 75%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+}
+
+#rules p {
+  font-size: 1.5rem;
+}
+
+#win-condition-rule {
+  margin-top: 20px;
+}
+
+.player-name {
+  position: relative;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.player-score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.current-container {
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#player-btns {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: #aaa;
+  color: #666;
+}
+
+button:disabled:hover {
+  background-color: #aaa;
+  color: #666;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none;
+}
